@@ -274,7 +274,8 @@ function getDrawerWord(list) {
 
 function drawTimer(time) {
 	var timer = setInterval(function(){
-		document.getElementById("timer").value = roundTime - timeleft -= 1;
+		document.getElementById("timer").value = roundTime - timeleft;
+		timeleft -= 1;
 		if(timeleft <=0){
 			clearInterval(timer);
 		}
