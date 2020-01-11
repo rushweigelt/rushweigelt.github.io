@@ -277,12 +277,12 @@ Timer for rounds and draw-times
 */
 function startDrawTimer(time) {
 	var timer = setInterval(function(){
-		document.getElementById("timer").innerHTML = 10 - timeleft;
-		timeleft -= 1
+		timeleft--;
+		document.getElementById("timer").textConent = timeleft;
 		if(timeleft <=0){
 			clearInterval(timer);
 		}
-	}, roundTime*100);
+	}, 1000);
 }
 /*
 Start round function
