@@ -179,7 +179,7 @@ find the top 5 predictions
 */
 function findTopValues(inp, count) {
 	var outp = [];
-	let indices - findIndicesOfMax(inp, count)
+	let indices = findIndicesOfMax(inp, count)
 	//show 5 greatest scvores
 	for (var i = 0; i < indices.length; i++)
 		outp[i] = inp[indices[i]]
