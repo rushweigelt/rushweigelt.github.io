@@ -214,7 +214,7 @@ load the model
 async function start(cur_mode) {
 	mode = cur_mode
 	//load model
-	model = await tf.loadLayersModel('model2/model.json')
+	model = await tf.loadLayersModel('model/model.json')
 	
 	//warm up
 	model.predict(tf.zeros([1, 28, 28, 1]))
