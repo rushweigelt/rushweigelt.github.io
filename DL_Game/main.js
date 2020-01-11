@@ -21,7 +21,7 @@ var mode;
 Prepare Canvas Info
 */
 $(function() {
-	canvas = windows._canvas = new fabric.Canvas('canvas');
+	canvas = window._canvas = new fabric.Canvas('canvas');
 	canvas.backgroundColor = '#ffffff';
 	canvas.isDrawingMode = 0;
 	canvas.freeDrawingBrush.color = "black";
