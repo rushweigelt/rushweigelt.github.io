@@ -14,15 +14,12 @@ console.log("hello")
 prepare the drawing canvas 
 */
 $(function() {
-	console.log("head")
     canvas = window._canvas = new fabric.Canvas('canvas');
-	console.log("after fabric call")
     canvas.backgroundColor = '#ffffff';
     canvas.isDrawingMode = 0;
     canvas.freeDrawingBrush.color = "black";
     canvas.freeDrawingBrush.width = 10;
     canvas.renderAll();
-	console.log("done canvas setup")
     //setup listeners 
     canvas.on('mouse:up', function(e) {
         getFrame();
@@ -34,7 +31,7 @@ $(function() {
     canvas.on('mouse:move', function(e) {
         recordCoor(e)
     });
-	console.log("but")
+	loadDict()
 })
 
 /*
