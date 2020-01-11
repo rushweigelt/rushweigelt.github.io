@@ -8,8 +8,6 @@ var canvas;
 var coords = [];
 var mousePressed = false;
 var mode;
-
-console.log("hello")
 /*
 prepare the drawing canvas 
 */
@@ -32,6 +30,7 @@ $(function() {
         recordCoor(e)
     });
 	loadDict()
+	start()
 })
 
 /*
@@ -61,10 +60,8 @@ function success(data) {
 /*
 load the model
 */
-async function start(cur_mode) {
+async function start() {
 	console.log("started")
-    //arabic or english
-    mode = cur_mode
     
     //load the model 
     model = await tf.loadLayersModel('model/model.json')
