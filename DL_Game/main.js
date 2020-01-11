@@ -9,6 +9,7 @@ var coords = [];
 var mousePressed = false;
 var mode;
 
+console.log("hello")
 /*
 prepare the drawing canvas 
 */
