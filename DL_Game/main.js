@@ -142,11 +142,8 @@ function getClassNames(indices) {
 load the class names 
 */
 async function loadDict() {
-    if (mode == 'ar')
-        loc = 'model/class_names_ar.txt'
-    else
-        loc = 'model/class_names.txt'
-    
+    loc = 'model/class_names.txt'
+    console.log("dict loaded")
     await $.ajax({
         url: loc,
         dataType: 'text',
