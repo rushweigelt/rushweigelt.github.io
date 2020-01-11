@@ -144,7 +144,7 @@ load the class names
 */
 async function loadDict() {
     
-	loc = 'model2/class_names.txt'
+	loc = 'model/class_names.txt'
     
     await $.ajax({
         url: loc,
