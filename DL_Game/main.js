@@ -263,7 +263,7 @@ function erase() {
 Randomize a word from list for Drawer to Drawer
 */
 function getDrawerWord(classNames) {
-	idx = Math.floor(Math.random() * (classNames+1));
+	idx = Math.floor(Math.random() * (classNames.length+1));
 	console.log(idx)
 	word = classNames[idx];
 	console.log(word)
