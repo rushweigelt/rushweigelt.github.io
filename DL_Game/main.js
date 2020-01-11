@@ -46,6 +46,7 @@ function setTable(top5, probs) {
     }
     //create the pie 
     createPie(".pieID.legend", ".pieID.pie");
+	console.log("set Table Completed")
 
 }
 
@@ -60,6 +61,7 @@ function recordCoor(event) {
     if (posX >= 0 && posY >= 0 && mousePressed) {
         coords.push(pointer)
     }
+	console.log("Record coordinates completed")
 }
 
 /*
@@ -84,11 +86,13 @@ function getMinBox() {
         y: Math.max.apply(null, coorY)
     }
 
+	console.log("get min box completed")
     //return as strucut 
     return {
         min: min_coords,
         max: max_coords
     }
+	
 }
 
 /*
@@ -102,6 +106,7 @@ function getImageData() {
         const dpi = window.devicePixelRatio
         const imgData = canvas.contextContainer.getImageData(mbb.min.x * dpi, mbb.min.y * dpi,
                                                       (mbb.max.x - mbb.min.x) * dpi, (mbb.max.y - mbb.min.y) * dpi);
+		console.log("get image data completed")
         return imgData
     }
 
