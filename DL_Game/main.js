@@ -222,6 +222,7 @@ async function start(cur_mode) {
     
     //load the model 
     model = await tf.loadLayersModel('model/model.json')
+	console.log("Model Loaded")
     
     //warm up 
     model.predict(tf.zeros([1, 28, 28, 1]))
