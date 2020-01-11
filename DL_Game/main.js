@@ -107,6 +107,7 @@ function recordCoor(event) {
     var posY = pointer.y;
 
     if (posX >= 0 && posY >= 0 && mousePressed) {
+		startDrawTimer(timeleft)
         coords.push(pointer)
 		console.log("coor recorded")
     }
@@ -265,17 +266,17 @@ function erase() {
 Randomize a word from list for Drawer to Drawer
 */
 function getDrawerWord(list) {
-	idx = Math.floor(Math.random() * (list.length+1));
+	idx = Math.floor(Math.random() * (list.length+1))
 	console.log(idx)
-	word = list[idx];
+	word = list[idx]
 	console.log(word)
 	document.getElementById('draw_word').innerHTML = word;
 }
 
-function drawTimer(time) {
+function startDrawTimer(time) {
 	var timer = setInterval(function(){
 		document.getElementById("timer").value = roundTime - timeleft;
-		timeleft -= 1;
+		timeleft -= 1
 		if(timeleft <=0){
 			clearInterval(timer);
 		}
