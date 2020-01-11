@@ -14,6 +14,7 @@ console.log("hello")
 prepare the drawing canvas 
 */
 $(function() {
+	console.log("head")
     canvas = window._canvas = new fabric.Canvas('canvas');
     canvas.backgroundColor = '#ffffff';
     canvas.isDrawingMode = 0;
@@ -31,6 +32,7 @@ $(function() {
     canvas.on('mouse:move', function(e) {
         recordCoor(e)
     });
+	console.log("but")
 })
 
 /*
