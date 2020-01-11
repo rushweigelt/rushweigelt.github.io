@@ -45,7 +45,6 @@ function setTable(top5, probs) {
     }
     //create the pie 
     createPie(".pieID.legend", ".pieID.pie");
-	console.log("set Table Completed")
 
 }
 
@@ -60,7 +59,6 @@ function recordCoor(event) {
     if (posX >= 0 && posY >= 0 && mousePressed) {
         coords.push(pointer)
     }
-	console.log("Record coordinates completed")
 }
 
 /*
@@ -85,13 +83,11 @@ function getMinBox() {
         y: Math.max.apply(null, coorY)
     }
 
-	console.log("get min box completed")
     //return as strucut 
     return {
         min: min_coords,
         max: max_coords
     }
-	
 }
 
 /*
@@ -105,7 +101,6 @@ function getImageData() {
         const dpi = window.devicePixelRatio
         const imgData = canvas.contextContainer.getImageData(mbb.min.x * dpi, mbb.min.y * dpi,
                                                       (mbb.max.x - mbb.min.x) * dpi, (mbb.max.y - mbb.min.y) * dpi);
-		console.log("get image data completed")
         return imgData
     }
 
@@ -129,7 +124,6 @@ function getFrame() {
 
         //set the table 
         setTable(names, probs)
-		console.log("get frame completed")
     }
 
 }
@@ -141,7 +135,6 @@ function getClassNames(indices) {
     var outp = []
     for (var i = 0; i < indices.length; i++)
         outp[i] = classNames[indices[i]]
-	console.log("get Class Names Completed")
     return outp
 }
 
@@ -149,14 +142,15 @@ function getClassNames(indices) {
 load the class names 
 */
 async function loadDict() {
-    
-	loc = 'model/class_names.txt'
+    if (mode == 'ar')
+        loc = 'model/class_names_ar.txt'
+    else
+        loc = 'model/class_names.txt'
     
     await $.ajax({
         url: loc,
         dataType: 'text',
     }).done(success);
-	console.log("load dict completed.")
 }
 
 /*
@@ -167,7 +161,6 @@ function success(data) {
     for (var i = 0; i < lst.length - 1; i++) {
         let symbol = lst[i]
         classNames[i] = symbol
-		console.log("successfully loaded data")
     }
 }
 
@@ -185,7 +178,6 @@ function findIndicesOfMax(inp, count) {
             outp.pop(); // remove the last index (index of smallest element in output array)
         }
     }
-	console.log("find indices max completed")
     return outp;
 }
 
@@ -198,7 +190,6 @@ function findTopValues(inp, count) {
     // show 5 greatest scores
     for (var i = 0; i < indices.length; i++)
         outp[i] = inp[indices[i]]
-	console.log("find top values completed")
     return outp
 }
 
@@ -219,7 +210,6 @@ function preprocess(imgData) {
 
         //We add a dimension to get a batch shape 
         const batched = normalized.expandDims(0)
-		console.log("Preprocessed data completed")
         return batched
     })
 }
@@ -228,11 +218,12 @@ function preprocess(imgData) {
 load the model
 */
 async function start(cur_mode) {
-	console.log("start started")
-	mode = cur_mode
+	console.log("started")
+    //arabic or english
+    mode = cur_mode
+    
     //load the model 
     model = await tf.loadLayersModel('model/model.json')
-	console.log("Model Loaded")
     
     //warm up 
     model.predict(tf.zeros([1, 28, 28, 1]))
@@ -249,7 +240,10 @@ allow drawing on canvas
 */
 function allowDrawing() {
     canvas.isDrawingMode = 1;
-    document.getElementById('status').innerHTML = 'Model Loaded';
+    if (mode == 'en')
+        document.getElementById('status').innerHTML = 'Model Loaded';
+    else
+        document.getElementById('status').innerHTML = 'تم التحميل';
     $('button').prop('disabled', false);
     var slider = document.getElementById('myRange');
     slider.oninput = function() {
