@@ -32,7 +32,6 @@ $(function() {
     });
 	loadDict()
 	start()
-	getDrawerWord(classNames)
 })
 
 /*
@@ -77,6 +76,7 @@ async function start() {
     
     //load the class names
     await loadDict()
+	getDrawerWord(classNames)
 }
 
 /*
