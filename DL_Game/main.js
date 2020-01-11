@@ -64,7 +64,7 @@ async function start() {
 	console.log("started")
     
     //load the model 
-    model = await tf.loadLayersModel('DL_Game/model/model.json')
+    model = await tf.loadLayersModel('model/model.json')
     
     //warm up 
     model.predict(tf.zeros([1, 28, 28, 1]))
