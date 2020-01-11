@@ -8,6 +8,7 @@ var canvas;
 var coords = [];
 var mousePressed = false;
 var mode;
+var drawerWord;
 /*
 prepare the drawing canvas 
 */
@@ -39,7 +40,7 @@ load the class names
 */
 async function loadDict() {
     loc = 'DL_Game/model/class_names.txt'
-    console.log("dict loaded")
+    //console.log("dict loaded")
     await $.ajax({
         url: loc,
         dataType: 'text',
@@ -55,7 +56,7 @@ function success(data) {
         let symbol = lst[i]
         classNames[i] = symbol
     }
-	console.log("classnames loaded into js obj")
+	//console.log("classnames loaded into js obj")
 }
 
 
@@ -263,6 +264,6 @@ Randomize a word from list for Drawer to Drawer
 */
 function getDrawerWord(classNames) {
 	idx = Math.floor(Math.random() * (classNames+1));
-	word = ClassNames[idx];
+	word = classNames[idx];
 	document.getElementById('draw_word').innerHTML = word;
 }
