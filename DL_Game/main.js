@@ -31,7 +31,7 @@ $(function() {
     });
 	loadDict()
 	start()
-	getDrawerWord()
+	getDrawerWord(classNames)
 })
 
 /*
@@ -55,6 +55,7 @@ function success(data) {
         let symbol = lst[i]
         classNames[i] = symbol
     }
+	console.log("classnames loaded into js obj")
 }
 
 
@@ -260,7 +261,7 @@ function erase() {
 /*
 Randomize a word from list for Drawer to Drawer
 */
-function getDrawerWord() {
+function getDrawerWord(classNames) {
 	idx = Math.floor(Math.random() * (classNames+1));
 	word = ClassNames[idx];
 	document.getElementById('draw_word').innerHTML = word;
