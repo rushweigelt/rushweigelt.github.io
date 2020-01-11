@@ -34,6 +34,30 @@ $(function() {
 })
 
 /*
+load the class names 
+*/
+async function loadDict() {
+    loc = 'model/class_names.txt'
+    console.log("dict loaded")
+    await $.ajax({
+        url: loc,
+        dataType: 'text',
+    }).done(success);
+}
+
+/*
+load the class names
+*/
+function success(data) {
+    const lst = data.split(/\n/)
+    for (var i = 0; i < lst.length - 1; i++) {
+        let symbol = lst[i]
+        classNames[i] = symbol
+    }
+}
+
+
+/*
 load the model
 */
 async function start(cur_mode) {
@@ -162,30 +186,6 @@ function getClassNames(indices) {
         outp[i] = classNames[indices[i]]
     return outp
 }
-
-/*
-load the class names 
-*/
-async function loadDict() {
-    loc = 'model/class_names.txt'
-    console.log("dict loaded")
-    await $.ajax({
-        url: loc,
-        dataType: 'text',
-    }).done(success);
-}
-
-/*
-load the class names
-*/
-function success(data) {
-    const lst = data.split(/\n/)
-    for (var i = 0; i < lst.length - 1; i++) {
-        let symbol = lst[i]
-        classNames[i] = symbol
-    }
-}
-
 /*
 get indices of the top probs
 */
