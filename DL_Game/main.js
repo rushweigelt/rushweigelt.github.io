@@ -107,7 +107,7 @@ function recordCoor(event) {
     var posY = pointer.y;
 
     if (posX >= 0 && posY >= 0 && mousePressed) {
-		startDrawTimer(timeleft)
+		roundStarted()
         coords.push(pointer)
 		console.log("coor recorded")
     }
@@ -275,10 +275,14 @@ function getDrawerWord(list) {
 
 function startDrawTimer(time) {
 	var timer = setInterval(function(){
-		document.getElementById("timer").innerHTML = roundTime - timeleft;
+		document.getElementById("timer").innerHTML = 10 - timeleft;
 		timeleft -= 1
 		if(timeleft <=0){
 			clearInterval(timer);
 		}
 	}, roundTime*100);
+}
+
+function roundStarted() {
+	startDrawTimer(timeleft)
 }
