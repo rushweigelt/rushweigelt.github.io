@@ -272,7 +272,9 @@ function getDrawerWord(list) {
 	console.log(word)
 	document.getElementById('draw_word').innerHTML = word;
 }
-
+/*
+Timer for rounds and draw-times
+*/
 function startDrawTimer(time) {
 	var timer = setInterval(function(){
 		document.getElementById("timer").innerHTML = 10 - timeleft;
@@ -282,7 +284,9 @@ function startDrawTimer(time) {
 		}
 	}, roundTime*100);
 }
-
+/*
+Start round function
+*/
 function roundStarted() {
 	startDrawTimer(timeleft)
 }
