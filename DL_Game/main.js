@@ -125,6 +125,7 @@ function getFrame() {
 
         //set the table 
         setTable(names, probs)
+		console.log("get frame completed")
     }
 
 }
@@ -136,6 +137,7 @@ function getClassNames(indices) {
     var outp = []
     for (var i = 0; i < indices.length; i++)
         outp[i] = classNames[indices[i]]
+	console.log("get Class Names Completed")
     return outp
 }
 
@@ -150,6 +152,7 @@ async function loadDict() {
         url: loc,
         dataType: 'text',
     }).done(success);
+	console.log("load dict completed.")
 }
 
 /*
@@ -160,6 +163,7 @@ function success(data) {
     for (var i = 0; i < lst.length - 1; i++) {
         let symbol = lst[i]
         classNames[i] = symbol
+		console.log("successfully loaded data")
     }
 }
 
@@ -177,6 +181,7 @@ function findIndicesOfMax(inp, count) {
             outp.pop(); // remove the last index (index of smallest element in output array)
         }
     }
+	console.log("find indices max completed")
     return outp;
 }
 
@@ -189,6 +194,7 @@ function findTopValues(inp, count) {
     // show 5 greatest scores
     for (var i = 0; i < indices.length; i++)
         outp[i] = inp[indices[i]]
+	console.log("find top values completed")
     return outp
 }
 
@@ -209,6 +215,7 @@ function preprocess(imgData) {
 
         //We add a dimension to get a batch shape 
         const batched = normalized.expandDims(0)
+		console.log("Preprocessed data completed")
         return batched
     })
 }
@@ -216,9 +223,7 @@ function preprocess(imgData) {
 /*
 load the model
 */
-async function start(cur_mode) {
-    //arabic or english
-    mode = cur_mode
+async function start() {
     
     //load the model 
     model = await tf.loadLayersModel('model/model.json')
