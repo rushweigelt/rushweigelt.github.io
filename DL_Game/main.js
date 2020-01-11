@@ -9,6 +9,8 @@ var coords = [];
 var mousePressed = false;
 var mode;
 var drawerWord;
+var roundTime = 20;
+var timeleft = roundTime;
 /*
 prepare the drawing canvas 
 */
@@ -270,5 +272,11 @@ function getDrawerWord(list) {
 	document.getElementById('draw_word').innerHTML = word;
 }
 
-//function drawTimer() {
-	
+function drawTimer(time) {
+	var timer = setInterval(function(){
+		document.getElementById("timer").value = roundTime - timeleft -= 1;
+		if(timeleft <=0){
+			clearInterval(timer);
+		}
+	}, roundTime*100);
+}
