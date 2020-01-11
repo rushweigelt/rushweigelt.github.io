@@ -34,6 +34,27 @@ $(function() {
 })
 
 /*
+load the model
+*/
+function start(cur_mode) {
+	console.log("started")
+    //arabic or english
+    mode = cur_mode
+    
+    //load the model 
+    model = await tf.loadLayersModel('model/model.json')
+    
+    //warm up 
+    model.predict(tf.zeros([1, 28, 28, 1]))
+    
+    //allow drawing on the canvas 
+    allowDrawing()
+    
+    //load the class names
+    await loadDict()
+}
+
+/*
 set the table of the predictions 
 */
 function setTable(top5, probs) {
@@ -44,6 +65,7 @@ function setTable(top5, probs) {
         sym.innerHTML = top5[i]
         prob.innerHTML = Math.round(probs[i] * 100)
     }
+	console.log("table set")
     //create the pie 
     createPie(".pieID.legend", ".pieID.pie");
 
@@ -59,6 +81,7 @@ function recordCoor(event) {
 
     if (posX >= 0 && posY >= 0 && mousePressed) {
         coords.push(pointer)
+		console.log("coor recorded")
     }
 }
 
@@ -89,6 +112,7 @@ function getMinBox() {
         min: min_coords,
         max: max_coords
     }
+	console.log("minibox done")
 }
 
 /*
@@ -210,27 +234,6 @@ function preprocess(imgData) {
         const batched = normalized.expandDims(0)
         return batched
     })
-}
-
-/*
-load the model
-*/
-async function start(cur_mode) {
-	console.log("started")
-    //arabic or english
-    mode = cur_mode
-    
-    //load the model 
-    model = await tf.loadLayersModel('model/model.json')
-    
-    //warm up 
-    model.predict(tf.zeros([1, 28, 28, 1]))
-    
-    //allow drawing on the canvas 
-    allowDrawing()
-    
-    //load the class names
-    await loadDict()
 }
 
 /*
