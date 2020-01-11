@@ -87,7 +87,7 @@ function setTable(top5, probs) {
     for (var i = 0; i < top5.length; i++) {
         let sym = document.getElementById('sym' + (i + 1))
         let prob = document.getElementById('prob' + (i + 1))
-        sym.innerHTML = top5[i]
+        sym.innerHTML = "???"
         prob.innerHTML = Math.round(probs[i] * 100)
     }
 	console.log("table set")
@@ -269,3 +269,6 @@ function getDrawerWord(list) {
 	console.log(word)
 	document.getElementById('draw_word').innerHTML = word;
 }
+
+//function drawTimer() {
+	
