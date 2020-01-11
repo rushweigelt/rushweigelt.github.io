@@ -227,7 +227,8 @@ function preprocess(imgData) {
 /*
 load the model
 */
-async function start() {
+async function start(cur_mode) {
+	mode = cur_mode
     //load the model 
     model = await tf.loadLayersModel('model/model.json')
 	console.log("Model Loaded")
