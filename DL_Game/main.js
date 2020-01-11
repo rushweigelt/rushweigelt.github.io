@@ -31,6 +31,7 @@ $(function() {
     });
 	loadDict()
 	start()
+	getDrawerWord()
 })
 
 /*
@@ -254,4 +255,13 @@ function erase() {
     canvas.clear();
     canvas.backgroundColor = '#ffffff';
     coords = [];
+}
+
+/*
+Randomize a word from list for Drawer to Drawer
+*/
+function getDrawerWord() {
+	idx = Math.floor(Math.random() * (classNames+1));
+	word = ClassNames[idx];
+	document.getElementById('draw_word').innerHTML = word;
 }
