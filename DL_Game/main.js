@@ -36,7 +36,7 @@ $(function() {
 /*
 load the model
 */
-function start(cur_mode) {
+async function start(cur_mode) {
 	console.log("started")
     //arabic or english
     mode = cur_mode
