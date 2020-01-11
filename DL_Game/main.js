@@ -57,6 +57,19 @@ function setPredictionTable(top5, probs) {
 }
 
 /*
+Record the current drawing
+*/
+function recordCoor(event) {
+	var pointer = canvas.getPointer(event.e);
+	var posX = pointer.x;
+	var posY = pointer.y;
+	
+	if (posX >= 0 && posY >= 0 && mousePressed) {
+		coords.push(pointer)
+	}
+}
+
+/*
 get the best bounding box by trimming around the drawing
 */
 function getMiniBox() {
