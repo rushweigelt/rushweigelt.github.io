@@ -32,6 +32,7 @@ $(function() {
     });
 	loadDict()
 	start()
+	getDrawerWord(classNames)
 })
 
 /*
@@ -55,7 +56,6 @@ function success(data) {
         let symbol = lst[i]
         classNames[i] = symbol
     }
-	//getDrawerWord(classNames)
 	//console.log("classnames loaded into js obj")
 }
 
@@ -262,10 +262,10 @@ function erase() {
 /*
 Randomize a word from list for Drawer to Drawer
 */
-function getDrawerWord(classNames) {
-	idx = Math.floor(Math.random() * (classNames.length+1));
+function getDrawerWord(list) {
+	idx = Math.floor(Math.random() * (list.length+1));
 	console.log(idx)
-	word = classNames[idx];
+	word = list[idx];
 	console.log(word)
 	document.getElementById('draw_word').innerHTML = word;
 }
