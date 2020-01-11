@@ -148,10 +148,8 @@ function getClassNames(indices) {
 load the class names
 */
 async function loadDict() {
-	if (mode == 'ar')
-		loc = 'DL_Game/model/class_names_ar.txt'
-	else
-		loc='DL_Game/model/class_names.txt'
+	
+	loc='DL_Game/model/class_names.txt'
 	
 	await $.ajax({
 		url: loc,
