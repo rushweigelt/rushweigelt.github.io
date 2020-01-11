@@ -37,7 +37,7 @@ $(function() {
 load the class names 
 */
 async function loadDict() {
-    loc = 'model/class_names.txt'
+    loc = 'DL_Game/model/class_names.txt'
     console.log("dict loaded")
     await $.ajax({
         url: loc,
