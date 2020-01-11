@@ -1,9 +1,4 @@
 /*
-imports
-*/
-import * as tf from "@tensorflow/tfjs";
-
-/*
 variables
 */
 var model;
@@ -234,7 +229,7 @@ load the model
 */
 async function start() {
     //load the model 
-    model = tf.loadLayersModel('model/model.json')
+    model = await tf.loadLayersModel('model/model.json')
 	console.log("Model Loaded")
     
     //warm up 
