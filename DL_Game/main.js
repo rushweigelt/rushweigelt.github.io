@@ -32,7 +32,6 @@ $(function() {
     });
 	loadDict()
 	start()
-	getDrawerWord(classNames)
 })
 
 /*
@@ -56,6 +55,7 @@ function success(data) {
         let symbol = lst[i]
         classNames[i] = symbol
     }
+	getDrawerWord(classNames)
 	//console.log("classnames loaded into js obj")
 }
 
