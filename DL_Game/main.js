@@ -295,6 +295,12 @@ function startDrawTimer(time) {
 	}
 }
 /*
+Restart Timer Displayed
+*/
+function restartTimer() {
+	document.getElementById("timer").innerHTML = roundTime;
+}
+/*
 Start round function
 */
 function roundStarted(time) {
@@ -313,6 +319,7 @@ start new round
 */
 function newRound () {
 	erase()
+	restartTimer()
 	getDrawerWord(classNames);
 }
 
