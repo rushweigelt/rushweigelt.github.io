@@ -313,7 +313,8 @@ function midRound() {
 start new round
 */
 function newRound () {
-		getDrawerWord(classNames);
+	erase()
+	getDrawerWord(classNames);
 }
 
 /*
