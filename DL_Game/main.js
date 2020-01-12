@@ -277,7 +277,7 @@ function getDrawerWord(list) {
 Timer for rounds and draw-times
 */
 function startDrawTimer(time) {
-	if timerRunning == false {
+	if (timerRunning == false) {
 		timerRunning = true;
 		var timer = setInterval(function(){
 			time--;
