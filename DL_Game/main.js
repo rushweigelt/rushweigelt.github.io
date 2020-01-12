@@ -306,7 +306,6 @@ Mid round -- go over results, switch drawer, randomize new word
 function midRound() {
 	revealModelGuesses(top5Names, top5Accs)
 	console.log(top5Names)
-	newRound()
 }
 
 /*
