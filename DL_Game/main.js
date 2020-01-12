@@ -11,6 +11,7 @@ var mode;
 var drawerWord;
 var roundTime = 20;
 var timeleft = roundTime;
+var timerRunning = false;
 /*
 prepare the drawing canvas 
 */
@@ -276,14 +277,18 @@ function getDrawerWord(list) {
 Timer for rounds and draw-times
 */
 function startDrawTimer(time) {
-	var timer = setInterval(function(){
-		time--;
-		document.getElementById("timer").innerHTML = time;
-		if(time <=0){
-			clearInterval(timer);
-			midRound();
-		}
-	}, 1000);
+	if timerRunning = false {
+		timerRunning= true;
+		var timer = setInterval(function(){
+			time--;
+			document.getElementById("timer").innerHTML = time;
+			if(time <=0){
+				clearInterval(timer);
+				midRound();
+				timerRunning = false;
+			}
+		}, 1000);
+	}
 }
 /*
 Start round function
