@@ -281,6 +281,7 @@ function startDrawTimer(time) {
 		document.getElementById("timer").innerHTML = time;
 		if(time <=0){
 			clearInterval(timer);
+			midRound();
 		}
 	}, 1000);
 }
@@ -289,4 +290,10 @@ Start round function
 */
 function roundStarted(time) {
 	startDrawTimer(time)
+}
+/*
+Mid round -- go over results, switch drawer, randomize new word
+*/
+function midRound() {
+	getDrawerWord(classNames);
 }
