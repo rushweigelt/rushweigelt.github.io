@@ -12,8 +12,8 @@ var drawerWord;
 var roundTime = 10;
 var timeleft = roundTime;
 var timerRunning = false;
-var names = []
-var probs = []
+var top5Names = []
+var top5Accs = []
 /*
 prepare the drawing canvas 
 */
@@ -177,6 +177,8 @@ function getFrame() {
         const indices = findIndicesOfMax(pred, 5)
         const probs = findTopValues(pred, 5)
         const names = getClassNames(indices)
+		top5Names = names
+		top5Accs = probs
 
         //set the table 
         setTable(names, probs)
@@ -302,8 +304,8 @@ function roundStarted(time) {
 Mid round -- go over results, switch drawer, randomize new word
 */
 function midRound() {
-	revealModelGuesses(names, probs)
-	console.log(names)
+	revealModelGuesses(top5Names, top5Accs)
+	console.log(top5Names)
 	newRound()
 }
 
