@@ -300,5 +300,12 @@ function roundStarted(time) {
 Mid round -- go over results, switch drawer, randomize new word
 */
 function midRound() {
-	getDrawerWord(classNames);
+	
+}
+
+/*
+start new round
+*/
+function newRound () {
+		getDrawerWord(classNames);
 }
