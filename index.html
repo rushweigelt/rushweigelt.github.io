@@ -40,8 +40,8 @@
   <p> Draw a(n): <h4 id="draw_word" > 		</h4></p>
 </div>
 <div class="row">
-<div class="col" style="margin-left:100px;'>
-
+  <div class="col" style ='margin-left:100px;'>
+<h4 id ='status' >Loading Model... </h4>	  
 <canvas id="canvas" width="300" height="300" class="canvas" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
 <div class="btn-group" style = 'margin-top:40px; '>
 <input type="range" min="5" max="20" value="10" class="slider" id="myRange" style ='margin-top:20px;'>
@@ -76,39 +76,12 @@
       </li>
     </ul>
   </section>
-  </div>
-  <div class="col">
-  <section style="margin-top:120px">
-    <ul class="player legend">
-      <li>
-        <em id = "guess_p1"></em>
-        <span id = "name_p1" ></span>
-      </li>
-      <li>
-        <em id = "guess_p2"></em>
-        <span id = "name_p2" ></span>
-      </li>
-      <li>
-        <em id = "guess_p3"></em>
-        <span id = "name_p3" ></span>
-      </li>
-      <li>
-        <em id = "guess_p4"></em>
-        <span id = "name_p4" ></span>
-      </li>
-      <li>
-        <em id = "guess_p5"></em>
-        <span id = "name_p5" ></span>
-      </li>
-    </ul>
-  </section>
-</div>	  
-</div>  
-<div> <h1 id ='status' >Loading Model... </h1>
 </div>
+</div>  
 </body>
-<script src="DL_Game/pie.js"></script>
+<script src="pie.js"></script>
 <script>
 	console.log('starting');
+	start('en')
 </script>
 </html>
