@@ -14,6 +14,8 @@ var timeleft = roundTime;
 var timerRunning = false;
 var top5Names = []
 var top5Accs = []
+var fakePlayers = ['Alex', 'Jen', 'Boyd', 'Jichen', 'Evan']
+var fakeGuesses = ['apple', 'jerky', 'banana', 'jackhammer', 'ewok']
 /*
 prepare the drawing canvas 
 */
@@ -333,4 +335,20 @@ function revealModelGuesses (top5, acc) {
         sym.innerHTML = top5[i]
         prob.innerHTML = Math.round(acc[i] * 100)
     }
+}
+/*
+set Player table for their guesses
+*/
+function setTable(top5, probs) {
+    //loop over the predictions 
+    for (var i = 0; i < top5.length; i++) {
+        let guess = document.getElementById('guess_p' + (i + 1))
+        let name = document.getElementById('name_p' + (i + 1))
+        guess.innerHTML = fakeGuesses[i+1]
+        name.innerHTML = fakePlayers[i+1]
+    }
+	console.log("table set")
+    //create the pie 
+    createPie(".pieID.legend", ".pieID.pie");
+
 }
