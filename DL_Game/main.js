@@ -278,7 +278,7 @@ Timer for rounds and draw-times
 function startDrawTimer(time) {
 	var timer = setInterval(function(){
 		time--;
-		document.getElementById("timer").textConent = time;
+		document.getElementById("timer").innerHTML = time;
 		if(time <=0){
 			clearInterval(timer);
 		}
