@@ -300,7 +300,8 @@ function roundStarted(time) {
 Mid round -- go over results, switch drawer, randomize new word
 */
 function midRound() {
-	
+	revealModelGuesses()
+	newRound()
 }
 
 /*
@@ -308,4 +309,16 @@ start new round
 */
 function newRound () {
 		getDrawerWord(classNames);
+}
+
+/*
+reveal model guesses
+*/
+function revealModelGuesses () {
+	for (var i = 0; i < top5.length; i++) {
+        let sym = document.getElementById('sym' + (i + 1))
+        let prob = document.getElementById('prob' + (i + 1))
+        sym.innerHTML = top5[i]
+        prob.innerHTML = Math.round(probs[i] * 100)
+    }
 }
