@@ -1,6 +1,6 @@
 /* build: `node build.js modules=ALL exclude=gestures,accessors requirejs minifier=uglifyjs` */
 /*! Fabric.js Copyright 2008-2015, Printio (Juriy Zaytsev, Maxim Chernyak) */
-
+/*Referenced here by Zaid Alyafeai*/
 var fabric = fabric || { version: '2.3.1' };
 if (typeof exports !== 'undefined') {
   exports.fabric = fabric;

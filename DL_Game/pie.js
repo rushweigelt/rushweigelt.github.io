@@ -1,3 +1,4 @@
+/*Pie function from Zaid Alyafaei*/
 function sliceSize(dataNum, dataTotal) {
   return (dataNum / dataTotal) * 360;
 }
