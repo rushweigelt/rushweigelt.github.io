@@ -107,7 +107,7 @@ function recordCoor(event) {
     var posY = pointer.y;
 
     if (posX >= 0 && posY >= 0 && mousePressed) {
-		roundStarted()
+		roundStarted(timeleft)
         coords.push(pointer)
 		console.log("coor recorded")
     }
@@ -287,6 +287,6 @@ function startDrawTimer(time) {
 /*
 Start round function
 */
-function roundStarted() {
-	startDrawTimer(timeleft)
+function roundStarted(time) {
+	startDrawTimer(time)
 }
