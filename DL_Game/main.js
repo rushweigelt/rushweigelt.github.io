@@ -9,7 +9,7 @@ var coords = [];
 var mousePressed = false;
 var mode;
 var drawerWord;
-var roundTime = 20;
+var roundTime = 10;
 var timeleft = roundTime;
 var timerRunning = false;
 /*
