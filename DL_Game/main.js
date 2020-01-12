@@ -12,6 +12,8 @@ var drawerWord;
 var roundTime = 10;
 var timeleft = roundTime;
 var timerRunning = false;
+var names = []
+var probs = []
 /*
 prepare the drawing canvas 
 */
@@ -300,7 +302,7 @@ function roundStarted(time) {
 Mid round -- go over results, switch drawer, randomize new word
 */
 function midRound() {
-	revealModelGuesses()
+	revealModelGuesses(names, probs)
 	newRound()
 }
 
@@ -314,11 +316,11 @@ function newRound () {
 /*
 reveal model guesses
 */
-function revealModelGuesses () {
+function revealModelGuesses (top5, acc) {
 	for (var i = 0; i < top5.length; i++) {
         let sym = document.getElementById('sym' + (i + 1))
         let prob = document.getElementById('prob' + (i + 1))
         sym.innerHTML = top5[i]
-        prob.innerHTML = Math.round(probs[i] * 100)
+        prob.innerHTML = Math.round(acc[i] * 100)
     }
 }
