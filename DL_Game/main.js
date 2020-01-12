@@ -345,8 +345,8 @@ function setPlayerTable(players, guesses) {
     for (var i = 0; i < players.length; i++) {
         let guess = document.getElementById('guess_p' + (i + 1))
         let name = document.getElementById('name_p' + (i + 1))
-        guess.innerHTML = guesses[i+1]
-        name.innerHTML = players[i+1]
+        guess.innerHTML = guesses[i]
+        name.innerHTML = players[i]
     }
 	console.log("table set")
     //create the pie 
