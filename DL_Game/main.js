@@ -182,7 +182,7 @@ function getFrame() {
 		top5Names = names
 		top5Accs = probs
 
-        //set the table 
+        //set the ML guess table, Pie chart, and Player Table 
         setTable(names, probs)
 		setPlayerTable(fakePlayers, fakeGuesses)
     }
