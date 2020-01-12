@@ -184,7 +184,7 @@ function getFrame() {
 
         //set the table 
         setTable(names, probs)
-		setPlayerTable()
+		setPlayerTable(fakePlayers, fakeGuesses)
     }
 
 }
@@ -340,13 +340,13 @@ function revealModelGuesses (top5, acc) {
 /*
 set Player table for their guesses
 */
-function setPlayerTable() {
+function setPlayerTable(players, guesses) {
     //loop over the predictions 
-    for (var i = 0; i < top5.length; i++) {
+    for (var i = 0; i < players.length; i++) {
         let guess = document.getElementById('guess_p' + (i + 1))
         let name = document.getElementById('name_p' + (i + 1))
-        guess.innerHTML = fakeGuesses[i+1]
-        name.innerHTML = fakeNames[i+1]
+        guess.innerHTML = guesses[i+1]
+        name.innerHTML = players[i+1]
     }
 	console.log("table set")
     //create the pie 
