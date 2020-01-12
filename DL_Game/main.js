@@ -45,7 +45,7 @@ $(function() {
 load the class names 
 */
 async function loadDict() {
-    loc = 'DL_Game/model/class_names.txt'
+    loc = 'model/class_names.txt'
     //console.log("dict loaded")
     await $.ajax({
         url: loc,
@@ -73,7 +73,7 @@ async function start() {
 	console.log("started")
     
     //load the model 
-    model = await tf.loadLayersModel('DL_Game/model/model.json')
+    model = await tf.loadLayersModel('model/model.json')
     
     //warm up 
     model.predict(tf.zeros([1, 28, 28, 1]))
