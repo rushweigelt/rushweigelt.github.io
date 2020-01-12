@@ -350,6 +350,6 @@ function setPlayerTable(players, guesses) {
     }
 	console.log("table set")
     //create the pie 
-    createPie(".pieID.legend", ".pieID.pie");
+    //createPie(".pieID.legend", ".pieID.pie");
 
 }
