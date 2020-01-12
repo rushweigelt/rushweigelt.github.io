@@ -342,7 +342,7 @@ set Player table for their guesses
 */
 function setPlayerTable(players, guesses) {
     //loop over the predictions 
-    for (var i = 0; i < players.length; i++) {
+    for (var i = 0; i < 5; i++) {
         let guess = document.getElementById('guess_p' + (i + 1))
         let name = document.getElementById('name_p' + (i + 1))
         guess.innerHTML = guesses[i]
