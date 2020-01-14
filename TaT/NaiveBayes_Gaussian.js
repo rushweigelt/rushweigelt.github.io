@@ -1,5 +1,3 @@
-var fakeDataX = [4, 2, 5, 20, 20, 1, 5, 3]
-
 var GaussianNB = function(priors, sigmas, thetas) {
 
     this.priors = priors;
