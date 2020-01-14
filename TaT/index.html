@@ -65,9 +65,9 @@ body {
 <div class="topnav">
   <a href="#home" class="active">Logo</a>
   <div id="myLinks">
-    <a href="#news">Purpose</a>
-    <a href="#contact">About Us</a>
-    <a href="#about">Contact</a>
+    <a href="#purpose">Purpose</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
   </div>
   <a href="javascript:void(0);" class="icon" onclick="Menu_Nav()">
     <i class="fa fa-bars"></i>
@@ -78,6 +78,9 @@ body {
   <h3>Twitter Analysis Tool</h3>
   <p>Leverage the power of Machine Learning to detect Propaganda Bots on Twitter.</p>
   <p>Enter the Hashtag you wish to analyze below:</p>
+  <p> <input id="user_hashtag" type="text" value="Hashtag to Analyze"> </p>
+  <p> <button onclick="Hashtag_Scrape()">Find Bots!</button>
+  <p id="results_display"></p>
 </div>
 
 <!-- End smartphone / tablet look -->
