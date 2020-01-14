@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html
+Template Based on W3 Schools HTML tutorial>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,26 +64,26 @@ body {
 <div class="topnav">
   <a href="#home" class="active">Logo</a>
   <div id="myLinks">
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="#news">Purpose</a>
+    <a href="#contact">About Us</a>
+    <a href="#about">Contact</a>
   </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <a href="javascript:void(0);" class="icon" onclick="Menu_Nav()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
 
 <div style="padding-left:16px">
-  <h3>Vertical Mobile Navbar</h3>
-  <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
-  <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+  <h3>Twitter Analysis Tool</h3>
+  <p>Leverage the power of Machine Learning to detect Propaganda Bots on Twitter.</p>
+  <p>Enter the Hashtag you wish to analyze below:</p>
 </div>
 
 <!-- End smartphone / tablet look -->
 </div>
 
 <script>
-function myFunction() {
+function Menu_Nav() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
