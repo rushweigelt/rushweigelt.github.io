@@ -1,4 +1,8 @@
 /*
+Imports
+*/
+import {Setup_model} from './NavieBayes_Gaussian.js';
+/*
 variables
 */
 var fakeDataX = [4, 2, 5, 20, 20, 1, 5, 3]
