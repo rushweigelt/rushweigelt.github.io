@@ -1,12 +1,8 @@
 /*
-Imports
-*/
-import {Setup_model} from './NavieBayes_Gaussian.js';
-/*
+
 variables
 */
 var fakeDataX = [4, 2, 5, 20, 20, 1, 5, 3]
-const cls = require('./NativeBayes_Gaussian');
 
 
 /*
@@ -25,8 +21,9 @@ function run_NB() {
 }
 */
 function run_NB() {
-prediction = cls.predict(fakeDataX);
-console.log(prediction);
-prediction = cls.predict([1,1,1,1,1,1,1,1])
-console.log(prediction);
+    model = Setup_model();
+    prediction = model.predict(fakeDataX);
+    console.log(prediction);
+    prediction = cls.predict([1,1,1,1,1,1,1,1])
+    console.log(prediction);
 }

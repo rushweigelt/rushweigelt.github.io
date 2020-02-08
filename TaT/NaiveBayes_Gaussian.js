@@ -59,5 +59,3 @@ function Setup_model() {
 
     return new GaussianNB(priors, sigmas, thetas);
 }
-
-module.exports = Setup_model();
