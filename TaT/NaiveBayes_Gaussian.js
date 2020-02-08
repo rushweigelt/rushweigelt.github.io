@@ -60,4 +60,4 @@ function Setup_model() {
     return new GaussianNB(priors, sigmas, thetas);
 }
 
-export {Setup_model as default};
+module.exports = Setup_model();

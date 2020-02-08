@@ -6,7 +6,7 @@ import {Setup_model} from './NavieBayes_Gaussian.js';
 variables
 */
 var fakeDataX = [4, 2, 5, 20, 20, 1, 5, 3]
-var cls = NaiveBayes_Gaussian.GaussianNB.setup_model();
+const cls = require('./NativeBayes_Gaussian');
 
 
 /*
