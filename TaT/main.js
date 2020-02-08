@@ -2,6 +2,7 @@
 variables
 */
 var fakeDataX = [4, 2, 5, 20, 20, 1, 5, 3]
+var cls = NaiveBayes_Gaussian.GaussianNB.setup_model();
 
 
 /*
@@ -12,8 +13,16 @@ function Get_User_Hashtag() {
 	document.getElementById("report_display").innerHTML = x;
 }
 
+/*
 function run_NB() {
 	if hash node 2/dev/null; then
 		node NaiveBayes_Gaussian.js 4 2 5 20 20 1 5 3
 	fi
+}
+*/
+function run_NB() {
+prediction = cls.predict(fakeDataX);
+console.log(prediction);
+prediction = cls.predict([1,1,1,1,1,1,1,1])
+console.log(prediction);
 }
