@@ -24,6 +24,6 @@ function run_NB() {
     model = Setup_model();
     prediction = model.predict(fakeDataX);
     console.log(prediction);
-    prediction = cls.predict([1,1,1,1,1,1,1,1])
+    prediction = model.predict([1,1,1,1,1,1,1,1])
     console.log(prediction);
 }

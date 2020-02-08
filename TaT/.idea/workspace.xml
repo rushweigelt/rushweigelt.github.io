@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9f9b91c-8a6c-43b5-9359-f1fc39b47f90" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DL_Game/DL_Foundation.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DL_Game/fabric.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DL_Game/index.html" beforeDir="false" />
@@ -15,8 +14,6 @@
       <change beforePath="$PROJECT_DIR$/../DL_Game/pie.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DL_Game/pie.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DL_Game/ten_classes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NaiveBayes_Gaussian.js" beforeDir="false" afterPath="$PROJECT_DIR$/NaiveBayes_Gaussian.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
