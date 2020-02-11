@@ -44,9 +44,8 @@ async function load_LSTM() {
     //load model
     model = await tf.loadLayersModel('models/model.json');
     //warm up
-    console.log(model.predict([1,1,1,1,1,1,1,1]));
-    const pred = model.predict([1,1,1,1,1,1,1,1]);
-    console.log(pred);
+    console.log(model.predict(["TRUMP IS A DISASTER"]));
+    //console.log(pred);
     //return model;
 }
 /*
