@@ -47,8 +47,8 @@ function load_LSTM() {
     model.predict([1,1,1,1,1,1,1,1])
 }
 
-function LSTM_predict(data) {
+function LSTM_predict() {
     load_LSTM()
-    const pred = model.predict(data)
+    const pred = model.predict(1,1,1,1,1,1,1,1])
     console.log(pred)
 }
