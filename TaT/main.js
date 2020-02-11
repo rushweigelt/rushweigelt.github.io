@@ -44,7 +44,9 @@ async function load_LSTM() {
     //load model
     model = await tf.loadLayersModel('models/model.json');
     //warm up
-    model.predict([1,1,1,1,1,1,1,1]);
+    console.log(model.predict([1,1,1,1,1,1,1,1]));
+
+    //return model;
 }
 
 function LSTM_predict() {
