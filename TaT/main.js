@@ -42,9 +42,9 @@ function run_selected_model(user_selection) {
 
 function load_LSTM() {
     //load model
-    model = await tf.loadLayersModel('model/model.json')
+    //model = await tf.loadLayersModel('model/model.json')
     //warm up
-    model.predict([1,1,1,1,1,1,1,1])
+    //model.predict([1,1,1,1,1,1,1,1])
 }
 
 function LSTM_predict() {
