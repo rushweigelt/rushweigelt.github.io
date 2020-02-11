@@ -40,15 +40,15 @@ function run_selected_model(user_selection) {
     }
 }
 
-function load_LSTM() {
+//function load_LSTM() {
     //load model
     //model = await tf.loadLayersModel('model/model.json')
     //warm up
     //model.predict([1,1,1,1,1,1,1,1])
-}
+//}
 
 function LSTM_predict() {
     load_LSTM();
-    const pred = model.predict(1,1,1,1,1,1,1,1]);
+    const pred = model.predict([1,1,1,1,1,1,1,1]);
     console.log(pred);
 }
