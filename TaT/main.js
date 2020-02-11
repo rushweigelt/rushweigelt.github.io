@@ -25,18 +25,18 @@ function run_NB() {
     model = Setup_model();
     prediction = model.predict(fakeDataX);
     console.log(prediction);
-    prediction = model.predict([1,1,1,1,1,1,1,1])
+    prediction = model.predict([1,1,1,1,1,1,1,1]);
     console.log(prediction);
 }
 
 function run_selected_model(user_selection) {
     if (user_selection.equals("Naive Bayes"))
     {
-        run_NB()
+        run_NB();
     }
     else if (user_selection.equals("LSTM"))
     {
-        run_LSTM()
+        run_LSTM();
     }
 }
 
@@ -48,7 +48,7 @@ function load_LSTM() {
 }
 
 function LSTM_predict() {
-    load_LSTM()
-    const pred = model.predict(1,1,1,1,1,1,1,1])
-    console.log(pred)
+    load_LSTM();
+    const pred = model.predict(1,1,1,1,1,1,1,1]);
+    console.log(pred);
 }
