@@ -48,6 +48,7 @@ function load_LSTM() {
 }
 
 function LSTM_predict(data) {
+    load_LSTM()
     const pred = model.predict(data)
     console.log(pred)
 }
