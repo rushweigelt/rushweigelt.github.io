@@ -2,7 +2,8 @@
 
 variables
 */
-var fakeDataX = [4, 2, 5, 20, 20, 1, 5, 3]
+var fakeDataX = [4, 2, 5, 20, 20, 1, 5, 3];
+var model;
 
 
 /*
@@ -26,4 +27,27 @@ function run_NB() {
     console.log(prediction);
     prediction = model.predict([1,1,1,1,1,1,1,1])
     console.log(prediction);
+}
+
+function run_selected_model(user_selection) {
+    if (user_selection.equals("Naive Bayes"))
+    {
+        run_NB()
+    }
+    else if (user_selection.equals("LSTM"))
+    {
+        run_LSTM()
+    }
+}
+
+function load_LSTM() {
+    //load model
+    model = await tf.loadLayersModel('model/model.json')
+    //warm up
+    model.predict([1,1,1,1,1,1,1,1])
+}
+
+function LSTM_predict(data) {
+    const pred = model.predict(data)
+    console.log(pred)
 }
