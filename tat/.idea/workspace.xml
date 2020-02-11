@@ -14,7 +14,7 @@
       <change beforePath="$PROJECT_DIR$/../DL_Game/pie.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DL_Game/pie.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DL_Game/ten_classes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +33,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/models" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/models" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -49,9 +58,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="255" y="355" key="com.intellij.ide.util.TipDialog" timestamp="1581140408132">
-      <screen x="0" y="23" width="1440" height="873" />
+    <state x="1682" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1581459913637">
+      <screen x="1440" y="23" width="1366" height="745" />
     </state>
     <state x="255" y="355" key="com.intellij.ide.util.TipDialog/0.23.1440.873/1440.23.1366.745@0.23.1440.873" timestamp="1581140408132" />
+    <state x="1682" y="306" key="com.intellij.ide.util.TipDialog/1440.23.1366.745/0.23.1440.877@1440.23.1366.745" timestamp="1581459913637" />
   </component>
 </project>
