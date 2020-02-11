@@ -45,7 +45,7 @@ async function load_LSTM() {
     model = await tf.loadLayersModel('models/model.json');
     //warm up
     model.predict(tf.tensor(["TRUMP IS A DISASTER"]));
-    const pred = model.predict(tf.tensor("FOO FOO FOO FOO FOO"));
+    const pred = model.predict(tf.tensor(["FOO FOO FOO FOO FOO"]));
     console.log(pred);
     //return model;
 }
