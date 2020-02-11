@@ -45,12 +45,14 @@ async function load_LSTM() {
     model = await tf.loadLayersModel('models/model.json');
     //warm up
     console.log(model.predict([1,1,1,1,1,1,1,1]));
-
+    const pred = model.predict([1,1,1,1,1,1,1,1]);
+    console.log(pred);
     //return model;
 }
-
+/*
 function LSTM_predict() {
     load_LSTM();
     const pred = model.predict([1,1,1,1,1,1,1,1]);
     console.log(pred);
 }
+*/
