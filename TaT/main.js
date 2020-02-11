@@ -41,10 +41,10 @@ function run_selected_model(user_selection) {
 }
 
 async function load_LSTM() {
-    load model
-    model = await tf.loadLayexrsModel('model/model.json')
-    warm up
-    model.predict([1,1,1,1,1,1,1,1])
+    //load model
+    model = await tf.loadLayexrsModel('model/model.json');
+    //warm up
+    model.predict([1,1,1,1,1,1,1,1]);
 }
 
 function LSTM_predict() {
