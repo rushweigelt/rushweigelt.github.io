@@ -6,4 +6,4 @@ Check out this combination of Pictionary and Google's Quick, Draw! Tools
 
 #Twitter Analysis Tool
 Check out this propaganda twitter bot tool we made for senior project:
-<http://rushwiegelt.github.io/TaT/>
+<http://34.230.25.147:8000>
